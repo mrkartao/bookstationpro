@@ -6,9 +6,6 @@ import path from 'path';
 import fs from 'fs';
 import { networkInterfaces } from 'os';
 
-// @ts-ignore - node-rsa types not available
-declare module 'node-rsa';
-
 export interface LicenseRequest {
     macHash: string;
     deviceId: string;

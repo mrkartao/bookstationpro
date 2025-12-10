@@ -98,7 +98,6 @@
           "arch": ["x64", "ia32"]
         }
       ],
-      "icon": "public/icon.ico",
       "requestedExecutionLevel": "asInvoker"
     },
     "nsis": {
@@ -108,11 +107,7 @@
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "Book Station Pro",
-      "uninstallDisplayName": "Book Station Pro",
-      "installerIcon": "public/icon.ico",
-      "uninstallerIcon": "public/icon.ico",
-      "installerHeaderIcon": "public/icon.ico",
-      "include": "build/installer.nsh"
+      "uninstallDisplayName": "Book Station Pro"
     },
     "electronDownload": {
       "mirror": "https://npmmirror.com/mirrors/electron/"

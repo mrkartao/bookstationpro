@@ -67,6 +67,8 @@ jobs:
           # settings, electron-builder will sign the produced installer.
           CSC_BASE64: ${{ secrets.CSC_BASE64 }}
           CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
+          # electron-builder expects GH_TOKEN to publish GitHub artifacts/releases
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if ($env:ARCH -eq 'x64') { npm run build:win64 } else { npm run build:win32 }
 

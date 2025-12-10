@@ -1,0 +1,118 @@
+.store-setup-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  background: var(--color-bg-primary);
+}
+
+.setup-container {
+  max-width: 800px;
+  width: 100%;
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+}
+
+.setup-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.setup-header h1 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.setup-header p {
+  color: var(--color-text-secondary);
+}
+
+.setup-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.progress-step {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.progress-step.active {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.progress-line {
+  width: 100px;
+  height: 4px;
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+.setup-step h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.store-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.store-type-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background: var(--color-bg-tertiary);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.store-type-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.store-type-card.selected {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.type-icon {
+  font-size: 2.5rem;
+}
+
+.type-label {
+  font-weight: 500;
+  text-align: center;
+}
+
+.setup-form {
+  margin-bottom: var(--spacing-xl);
+}
+
+.setup-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+}

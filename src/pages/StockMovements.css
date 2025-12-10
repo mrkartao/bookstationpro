@@ -1,0 +1,14 @@
+.stock-movements-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.movements-filters {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.movements-filters select {
+  width: 200px;
+}

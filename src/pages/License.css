@@ -1,0 +1,116 @@
+.license-page {
+    max-width: 800px;
+}
+
+.license-page h1 {
+    margin-bottom: var(--spacing-xl);
+}
+
+.license-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.license-info__row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.license-info__row:last-child {
+    border-bottom: none;
+}
+
+.license-trial {
+    padding: var(--spacing-lg);
+    background: var(--color-warning-light);
+    border-radius: var(--radius-md);
+    color: var(--color-warning);
+}
+
+.machine-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.machine-info__item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+}
+
+.machine-info__item span {
+    min-width: 120px;
+    color: var(--color-text-secondary);
+}
+
+.machine-info__item code {
+    flex: 1;
+    font-family: monospace;
+    background: var(--color-bg-input);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+}
+
+.license-request {
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+}
+
+.license-request__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.license-request pre {
+    background: var(--color-bg-input);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    font-size: var(--font-size-sm);
+    font-family: monospace;
+}
+
+textarea.input {
+    resize: vertical;
+    min-height: 100px;
+    font-family: monospace;
+}
+
+.license-message {
+    position: fixed;
+    bottom: var(--spacing-xl);
+    right: var(--spacing-xl);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    animation: slideInUp var(--transition-normal);
+    z-index: 1000;
+}
+
+html[dir="rtl"] .license-message {
+    right: auto;
+    left: var(--spacing-xl);
+}
+
+.license-message--success {
+    background: var(--color-success);
+    color: white;
+}
+
+.license-message--error {
+    background: var(--color-danger);
+    color: white;
+}
+
+.text-warning {
+    color: var(--color-warning);
+}

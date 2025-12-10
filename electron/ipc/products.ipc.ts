@@ -252,7 +252,7 @@ export function registerProductsIPC(ipcMain: IpcMain): void {
     });
 
     // Import products from file
-    ipcMain.handle('products:import', async (_event, filePath: string) => {
+    ipcMain.handle('products:import', async (_event) => {
         try {
             // Import logic would use xlsx library to parse Excel/CSV
             // This is a placeholder for the full implementation
@@ -263,10 +263,10 @@ export function registerProductsIPC(ipcMain: IpcMain): void {
     });
 
     // Export products to file
-    ipcMain.handle('products:export', async (_event, filePath: string, format: string) => {
+    ipcMain.handle('products:export', async (_event) => {
         try {
             // Export logic would generate Excel/CSV file
-            return { success: true, path: filePath };
+            return { success: true, path: '' };
         } catch (error) {
             return { success: false, error: (error as Error).message };
         }
@@ -426,7 +426,7 @@ export function registerProductsIPC(ipcMain: IpcMain): void {
         }
     });
 
-    ipcMain.handle('stock:adjust', async (_event, productId: number, quantity: number, reason: string) => {
+    ipcMain.handle('stock:adjust', async (_event) => {
         // This is handled by stock:addMovement with type 'adjustment'
         return { success: true };
     });

@@ -6,6 +6,9 @@ import path from 'path';
 import fs from 'fs';
 import { networkInterfaces } from 'os';
 
+// @ts-ignore - node-rsa types not available
+declare module 'node-rsa';
+
 export interface LicenseRequest {
     macHash: string;
     deviceId: string;
@@ -258,7 +261,7 @@ export class LicenseService {
     public async activateLicense(licenseData: string): Promise<LicenseStatus> {
         try {
             // Parse the license data
-            const license = JSON.parse(licenseData) as License;
+            const licenseObj = JSON.parse(licenseData) as License;
 
             // Temporarily store for validation
             const licensePath = this.getLicensePath();

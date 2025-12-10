@@ -30,7 +30,6 @@ export default function POS() {
         getVatAmount,
         getTotal,
         getItemCount,
-        setDiscount,
         discountAmount,
     } = useCartStore();
 

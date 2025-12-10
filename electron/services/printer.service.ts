@@ -2,7 +2,6 @@ import { BrowserWindow } from 'electron';
 import { jsPDF } from 'jspdf';
 import 'jspdf-autotable';
 import fs from 'fs';
-import path from 'path';
 
 export interface PrintOptions {
     printerName?: string;

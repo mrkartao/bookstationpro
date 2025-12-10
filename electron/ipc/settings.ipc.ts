@@ -228,7 +228,7 @@ export function registerSettingsIPC(ipcMain: IpcMain): void {
     });
 
     // Restore database
-    ipcMain.handle('settings:restore', async (_event, filePath: string) => {
+    ipcMain.handle('settings:restore', async (_event) => {
         try {
             // This would require closing the current connection and replacing the database file
             // Then reopening the connection

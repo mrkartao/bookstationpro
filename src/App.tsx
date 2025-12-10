@@ -26,7 +26,7 @@ import TrialBanner from './components/common/TrialBanner';
 
 function App() {
     const { i18n } = useTranslation();
-    const { user, isAuthenticated, checkAuth } = useAuthStore();
+    const { isAuthenticated, checkAuth } = useAuthStore();
     const { language, loadSettings, isTrialMode } = useSettingsStore();
     const [isLoading, setIsLoading] = useState(true);
 

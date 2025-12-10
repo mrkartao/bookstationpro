@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSettingsStore } from '../stores/settingsStore';
 import './Reports.css';

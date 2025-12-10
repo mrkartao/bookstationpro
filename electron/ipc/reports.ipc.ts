@@ -194,7 +194,7 @@ export function registerReportsIPC(ipcMain: IpcMain): void {
     });
 
     // Profit & Loss (delegated to accounting)
-    ipcMain.handle('reports:profitLoss', async (_event, params: { startDate: string; endDate: string }) => {
+    ipcMain.handle('reports:profitLoss', async (_event) => {
         // This is handled by accounting:getProfitLoss
         return { success: true };
     });

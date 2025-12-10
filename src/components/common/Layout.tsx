@@ -8,7 +8,7 @@ export default function Layout() {
     const { t } = useTranslation();
     const navigate = useNavigate();
     const { user, logout } = useAuthStore();
-    const { language, setLanguage, storeConfig } = useSettingsStore();
+    const { language, setLanguage } = useSettingsStore();
 
     const handleLogout = async () => {
         await logout();

@@ -261,7 +261,7 @@ export class LicenseService {
     public async activateLicense(licenseData: string): Promise<LicenseStatus> {
         try {
             // Parse the license data
-            const licenseObj = JSON.parse(licenseData) as License;
+            JSON.parse(licenseData) as License;
 
             // Temporarily store for validation
             const licensePath = this.getLicensePath();

@@ -89,7 +89,7 @@ export class PrinterService {
      * Print to thermal receipt printer
      */
     private static async printThermal(
-        window: BrowserWindow,
+        _window: BrowserWindow,
         options: PrintOptions
     ): Promise<{ success: boolean; error?: string }> {
         // Generate thermal receipt HTML

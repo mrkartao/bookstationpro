@@ -627,7 +627,7 @@ export function registerSalesIPC(ipcMain: IpcMain): void {
         WHERE pi.purchase_id = ?
       `).all(id);
 
-            return { success: true, purchase: { ...purchase, items } };
+            return { success: true, purchase: purchase || {}, items };
         } catch (error) {
             return { success: false, error: (error as Error).message };
         }
